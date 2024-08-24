@@ -1,0 +1,29 @@
+
+
+
+Actors
+AuthorizedSender: Address of the owner whose cancellable Sablier streams will be accepted.
+Buyer: User who aquire some ERC20 FJO token.
+Vested Buyer: User who get some ERC721 vested FJO on Sablier created by Fjord.
+FJO-Staker: Buyer who staked his FJO token on the Fjord Staking contract.
+vFJO-Staker: Vested Buyer who staked his vested FJO on Sablier created by Fjord, on the Fjord Staking contract.
+Penalised Staker: a Staker that claim rewards before 3 epochs or 21 days.
+Rewarded Staker: Any kind of Stakers who got rewarded with Fjord's reward or with ERC20 BJB.
+Auction Creator: Only the owner of the AuctionFactory contract can create an auction and offer a valid project token earn by a "Fjord LBP event" as an auctionToken to bid on.
+Bidder: Any Rewarded Staker that bid his BJB token inside a Fjord's auctions contract.
+
+
+
+
+Compatibilities
+whiteliste address
+On the staking contract the owner can define new addAuthorizedSablierSender or removeAuthorizedSablierSender for the contract to be able to access new vested FJO from Sablier on the Fjord Staking contract.
+On the staking contract the owner can define new setRewardAdmin to allow that new address to be able to call addReward.
+
+
+
+Tokens:
+Ford Token (FJO) FJO contract
+FJO vested on Sablier <= v1.1.2 Lockup Linear by Fjord (vFJO)
+Bjord Boint (BJB) BJB contract
+ERC20 that did a successfull raise on Fjord Foundry LBP. (aka no exotic ERC20 with hooks)
